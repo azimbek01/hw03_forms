@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Создание нового поста{% endblock %}
+{% block content %}
+
+
+<div class='row justify-content-left'>
+    <div class='col-md-8 p-5'>
+        <div class='card'>
+            <div class='card-header'>Новый пост</div>
+            <div class='card-body'>
+                <div class='form-group row'>
+                    <form method='post' action=''>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type='submit' value='Добавить'/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

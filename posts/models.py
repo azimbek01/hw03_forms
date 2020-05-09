@@ -16,9 +16,9 @@ class Group(models.Model):
 
 class Post(models.Model):
     text = models.TextField()
-    pub_date = models.DateTimeField("date_published", auto_now_add=True)
+    pub_date = models.DateTimeField('date_published', auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
-                               related_name="author_posts")
+                               related_name='author_posts')
     group = models.ForeignKey(Group, on_delete=models.CASCADE,
-                              related_name="group_posts",
+                              related_name='group_posts',
                               blank=True, null=True)
